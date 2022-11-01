@@ -9,17 +9,13 @@
 }
 
 
+
 header {
   width: 100%;
   top: 0;
-  
-
   z-index: 9;
   background-color: white;
-  
-
   height: 300px;
-  
 }
 
 header > .inner {
@@ -46,15 +42,13 @@ header > .inner > a > .hidden-head {
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-header > .inner > a:hover .hidden-head{
+header > .inner > a:hover .hidden-head {
   margin-top: 80px;
   visibility: visible;
   opacity: 1;
-  
-  
 }
 
 /* nav */
@@ -68,6 +62,10 @@ nav {
 
 nav > a {
   font-family: "BMEuljiro";
+  width: 70px;
+  height: 10px;
+  text-align: center;
+
   position: relative;
   cursor: pointer;
   text-decoration: none;
@@ -78,8 +76,8 @@ nav > a {
   transform: translate3d(0, 0, 0);
 }
 
-
 .wave {
+
   opacity: 0.5;
   position: absolute;
   bottom: 3%;
@@ -101,8 +99,6 @@ nav > a:hover .wave {
   margin-bottom: -270px;
   animation: rotate 2500ms infinite linear;
 }
-
-
 
 @keyframes rotate {
   from {

@@ -4,15 +4,15 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-client=MongoClient("mongodb://localhost", 27017) #client로 MongoDB 접속
-db=client.jaehyun #client의 저장소 생성
+# client=MongoClient("mongodb://localhost", 27017) #client로 MongoDB 접속
+# db=client.jaehyun #client의 저장소 생성
 
 doc = {
     'name' : 'jaehyun',
     'age' : 29
 }
 
-db.users.insert_one(doc);
+# db.users.insert_one(doc);
 
 @app.route('/')
 def home():
