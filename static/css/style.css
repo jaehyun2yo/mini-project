@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "BMEuljiro10yearslater";
+  src: url(../fonts/BMEuljiro10yearslaterOTF.otf);
+}
+
+@font-face {
+  font-family: "BMEuljiro";
+  src: url(../fonts/BMEULJIRO.otf);
+}
+
+
+header {
+  width: 100%;
+  top: 0;
+  
+
+  z-index: 9;
+  background-color: white;
+  
+
+  height: 300px;
+  
+}
+
+header > .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header > .inner > a {
+  font-family: "BMEuljiro10yearslater";
+  font-size: 80px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+header > .inner > a > .hidden-head {
+  font-family: "BMEuljiro";
+  font-size: 14px;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+}
+
+header > .inner > a:hover .hidden-head{
+  margin-top: 80px;
+  visibility: visible;
+  opacity: 1;
+  
+  
+}
+
+/* nav */
+
+nav {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav > a {
+  font-family: "BMEuljiro";
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  margin: 0px 40px;
+  padding: 20px;
+  color: #333;
+  transform: translate3d(0, 0, 0);
+}
+
+
+.wave {
+  opacity: 0.5;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  background: rgb(0, 0, 0);
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  margin-bottom: -301px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+
+  transition-duration: 0.75s;
+  transition-property: margin-bottom;
+  transition-timing-function: ease;
+}
+
+nav > a:hover .wave {
+  margin-bottom: -270px;
+  animation: rotate 2500ms infinite linear;
+}
+
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+/*  team card  */
+
+.card {
+  width: 95%;
+  max-width: 800px;
+  height: 1000px;
+  margin: 70px auto 20px auto;
+
+  box-shadow: 0px 0px 3px 0px black;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card > img {
+  margin-top: 70px;
+  width: 550px;
+  height: 550px;
+}
+
+.card > .dec {
+  font-family: "BMEuljiro";
+  margin-top: 30px;
+  line-height: 200%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.card > .dec > p > .bold-font {
+  font-size: 45px;
+  font-weight: 1px;
+}
+
+/*  footer  */
+.footer {
+  height: 200px;
+}
+
+/* to-top */
+
+#to-top {
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+}
