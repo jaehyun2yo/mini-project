@@ -25,18 +25,24 @@ toTopEl.addEventListener("click", function () {
   });
 });
 
-// 이동
-// const jaehyun = document.querySelector(".jaehyun");
-const members = document.querySelectorAll(".member");
-console.log(members);
-// console.log(jaehyun);
+// // 이동
+// // const jaehyun = document.querySelector(".jaehyun");
+// const memberEl = document.querySelectorAll(".member");
+// const cardEl = document.querySelector(".card");
+// const memberList = ["팀장 김인섭", "김재현", "이태언", "김채하", "변시윤"];
 
-members.forEach((member) => {
-  member.addEventListener("click", onClickMember);
-});
 
-function onClickMember(e) {
-  e.preventDefault();
-  const name = e.target.innerText;
-  console.log(name);
-}
+// // console.log(members);
+// // console.log(jaehyun);
+// console.log(cardEl);
+
+// memberEl.forEach((member) => {
+//   member.addEventListener("click", onClickMember);
+// });
+
+// function onClickMember(e) {
+//   e.preventDefault();
+//   const name = e.target.innerText;
+ 
+//   console.log(name);
+// }
