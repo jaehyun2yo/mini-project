@@ -25,24 +25,29 @@ toTopEl.addEventListener("click", function () {
   });
 });
 
-// // 이동
-// // const jaehyun = document.querySelector(".jaehyun");
-// const memberEl = document.querySelectorAll(".member");
-// const cardEl = document.querySelector(".card");
-// const memberList = ["팀장 김인섭", "김재현", "이태언", "김채하", "변시윤"];
+$(".jaehyun").click(function () {
+  $.ajax({
+    type: "GET",
+    url: "/user/1",
+    success: function (response) {
+      console.log(JSON.stringify(response));
+    },
+  });
+});
 
+// 방명록
 
-// // console.log(members);
-// // console.log(jaehyun);
-// console.log(cardEl);
+// const commentBtn = document.querySelector("#button-addon2");
 
-// memberEl.forEach((member) => {
-//   member.addEventListener("click", onClickMember);
-// });
+// commentBtn.addEventListener("click", save_commnet);
 
-// function onClickMember(e) {
-//   e.preventDefault();
-//   const name = e.target.innerText;
- 
-//   console.log(name);
+// function save_commnet() {
+//   $.ajax({
+//     type: "POST",
+//     url: "user/1",
+//     data: { sample_give: "데이터전송" },
+//     success: function (response) {
+//       alert(response["msg"]);
+//     },
+//   });
 // }
