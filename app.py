@@ -41,13 +41,12 @@ def comment_save():
        return jsonify({ 'msg' : "작성완료 "})
 
 
-@app.route('/user/1', methods=["GET"])
+@app.route('/user/1/comments', methods=["GET"])
 def comment_get():
        comment_list = list(db.comment.find({}, {"_id" : False}))
-       return jsonify({'comment' : comment_list})
+       return jsonify({'comments' : comment_list})
     
     
 if __name__ == '__main__':  
-   
-  app.run('0.0.`0.0',port=5001,debug=True)
+   app.run('0.0.0.0',port=8000,debug=True)
   

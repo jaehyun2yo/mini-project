@@ -7,57 +7,6 @@
   font-family: "BMEuljiro";
   src: url(../fonts/BMEULJIRO.otf);
 }
-/* 반응형  */
-@media screen and (max-width: 989px) {
-  nav > a {
-    width: 23px;
-    margin: 0px 20px;
-  }
-
-  .card {
-    max-width: 600px;
-  }
-
-  .card > img {
-    margin-top: 40px;
-    width: 550px;
-    height: 550px;
-  }
-  .card > .dec {
-    margin-top: 50px;
-  }
-}
-
-@media screen and (max-width: 718px) {
-  nav > a {
-    width: 19px;
-    margin: 0px 10px;
-    font-size: 15px;
-  }
-
-  .card {
-    max-width: 400px;
-    height: 800px;
-  }
-
-  .card > img {
-    margin-top: 40px;
-    width: 350px;
-    height: 350px;
-  }
-
-  .card > .dec {
-    margin-top: 30px;
-    line-height: 200%;
-    text-align: center;
-    font-size: 15px;
-  }
-
-  .card > .dec > p > .bold-font {
-    font-size: 35px;
-    font-weight: 1px;
-  }
-}
 
 header {
   width: 100%;
@@ -95,7 +44,7 @@ header > .inner > a > .hidden-head {
 }
 
 header > .inner > a:hover .hidden-head {
-  margin-top: 80px;
+  margin-top: 100px;
   visibility: visible;
   opacity: 1;
 }
@@ -103,7 +52,9 @@ header > .inner > a:hover .hidden-head {
 /* nav */
 
 nav {
-  margin-top: 70px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -268,12 +219,11 @@ nav > a:hover .wave {
   height: 0px;
   padding: 0px;
   margin: 0px;
+  cursor: pointer;
 }
 
 #check-connect:checked ~ .connect-box {
-  width: 300px;
-}
-#check-connect:checked ~ .connect-box label {
+  width: 230px;
 }
 
 #check-connect:checked ~ .connect-box a {
@@ -289,6 +239,8 @@ nav > a:hover .wave {
   color: #fff;
   text-align: center;
   transition: all 0.7s;
+  display: flex;
+  justify-content: center;
 }
 
 .user-card > .connect > .connect-box > a {
@@ -298,19 +250,90 @@ nav > a:hover .wave {
 }
 .user-card > .connect > .connect-box > label {
   margin: 6px;
+  cursor: pointer;
 }
 
 /* comment */
 .comment {
   margin-top: 30px;
   width: 90%;
+  height: 80%;
 
-  border: 1px solid black;
   padding: 30px;
   transition: 0.7;
 }
+#list-id > .list-group-item {
+  /* border: none;
+  border-bottom: 2px dashed black; */
+}
 
 .comment > .list-group > .list-group-item:hover {
-  background-color: rgb(212, 210, 210);
-  color: white;
+  background-color: rgb(242, 239, 239);
+  color: #333;
+}
+/* 반응형  */
+@media screen and (max-width: 989px) {
+  nav > a {
+    width: 23px;
+    margin: 0px 20px;
+  }
+
+  .card {
+    max-width: 600px;
+  }
+
+  .card > img {
+    margin-top: 40px;
+    width: 550px;
+    height: 550px;
+  }
+  .card > .dec {
+    margin-top: 50px;
+  }
+
+  .user-card > .user-info > img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 718px) {
+  nav > a {
+    width: 19px;
+    margin: 0px 10px;
+    font-size: 15px;
+  }
+
+  .card {
+    max-width: 400px;
+    height: 80%;
+  }
+
+  .card > img {
+    margin-top: 40px;
+    width: 350px;
+    height: 350px;
+  }
+
+  .card > .dec {
+    margin-top: 30px;
+    line-height: 200%;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .card > .dec > p > .bold-font {
+    font-size: 35px;
+    font-weight: 1px;
+  }
+
+  .comment {
+    margin-top: 30px;
+    width: 90%;
+    padding: 30px;
+  }
+
+  .user-card > .user-info > img {
+    width: 45%;
+    height: 200px;
+  }
 }

@@ -2,15 +2,23 @@
 {% block content %}
 <script>
     $(document).ready(function () {
-        show_commnet();
+        show_comment();
     });
-    function show_commnet() {
+    function show_comment() {
         $.ajax({
             type: "GET",
-            url: "/1",
+            url: "/user/1/comments",
             data: {},
             success: function (response) {
-                console.log(response)
+
+                let rows = response['comments']
+                for (let i = 0; i < rows.length; i++) {
+                    let comment = rows[i]['comment']
+
+                    let temp_html = `<li class="list-group-item" >${comment}</li>`
+                    $('.list-group').append(temp_html);
+                }
+
             }
         })
     }
@@ -19,7 +27,7 @@
         let comment = $('#comment').val()
         $.ajax({
             type: "POST",
-            url: "1",
+            url: "/user/1",
             data: { comment_give: comment },
             success: function (response) {
                 alert(response["msg"]);
@@ -55,16 +63,18 @@
 
     <div class="input-group mb-3">
         <input id="comment" type="text" class="form-control" placeholder="방명록을 작성해보세요" aria-label="Recipient's username"
-            aria-describedby="button-addon2">
+            aria-describedby="button-addon2" onKeypress="javascript:if(event.keyCode==13) {search_onclick_submit}">
         <button onclick="save_comment()" class="btn btn-outline-secondary" type="button" id="button-addon2">남기기</button>
     </div>
-    <ul class="list-group">
-        <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-    </ul>
+    <div id="list-container">
+        <ul id="list-id" class="list-group">
+            <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+        </ul>
+    </div>
 
 </div>
 
